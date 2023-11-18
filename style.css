@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(-45deg, #6b6b6b, #121212, #1a1a1a, #292929);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em; /* Adjusted bottom margin for even spacing */
+    animation: fadeZoomIn 2s ease forwards;
+}
+
+.container .tagline {
+    font-size: 1.5rem;
+    margin-top: 0.5em; /* Added top margin for even spacing */
+    margin-bottom: 1em; /* Adjusted bottom margin for even spacing */
+    opacity: 0;
+    animation: fadeIn 3s ease 2s forwards;
+}
+
+.container .coming-soon {
+    font-size: 1.2rem;
+    margin-top: 0; /* Reduced top margin for even spacing */
+    margin-bottom: 2em; /* Increased bottom margin for balanced spacing */
+    opacity: 0;
+    animation: fadeIn 3s ease 4s forwards;
+}
+
+#developerButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0;
+    animation: fadeIn 3s ease 6s forwards;
+}
+
+#donateButton:hover {
+    background-color: white;
+    color: #121212;
+}
+
+@keyframes fadeZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
